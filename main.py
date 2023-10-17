@@ -1,5 +1,11 @@
 import tkinter as tk
+from bottle import run, route
 from tkinter import ttk, filedialog
+
+
+@route('/')
+def index():
+    main()
 
 
 def select_file(entry):
@@ -59,4 +65,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    run(host="0.0.0.0", port=8080)
