@@ -1,6 +1,8 @@
 import tkinter as tk
 from bottle import run, route
 from tkinter import ttk, filedialog
+import bottle
+
 
 
 @route('/')
@@ -64,5 +66,10 @@ def main():
     root.mainloop()
 
 
+application = bottle.default_app()
+
+
 if __name__ == "__main__":
     run(host="0.0.0.0", port=8080)
+
+application = bottle.default_app()
